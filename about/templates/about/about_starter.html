@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <h1>{{ about.title }}</h1>
+    <p>Last updated: {{ about.updated_on }}</p>
+    <div>
+        {{ about.content|safe }}
+    </div>
+    <img src="{% static 'images/nobody.jpg' %}" alt="No Image Available">
+</div>
+{% endblock %}
